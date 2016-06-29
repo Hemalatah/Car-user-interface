@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>car user interface</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- material icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	<div class="body">
+		<div id="map1">
+			<label for="routeFrom">From:
+			<input type="text" id="routeFrom" name="routeFrom" value="Zanker Road" /></label>
+
+			<label for="routeTo">To: <input type="text" id="routeTo" name="routeTo" value="Mountain View" /></label>
+			<button id="routeGo">Go</button>
+			<div id="map_canvas"></div>
+			<div id="directions"></div>
+			<i id="flip" class="fa fa-angle-up" style="font-size:24px"></i>
+			<div id="panel">
+			</div>	
+		</div>
+		<div id="map2">
+			<div i2d="show"></div>
+			<div class="show-app1">
+				<h5>Media Player</h5>
+				<div id="player">
+				<div class="container">
+			    <div class="column center">
+			        <h1>Audio Player</h1>
+			    </div>
+			    <div class="column add-bottom">
+			        <div id="mainwrap">
+			            <div id="nowPlay">
+			                <span class="left" id="npAction">Paused...</span>
+			                <span class="right" id="npTitle"></span>
+			            </div>
+			            <div id="audiowrap">
+			                <div id="audio0">
+			                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+			                </div>
+			                <div id="tracks">
+			                    <a id="btnPrev">&laquo;</a>
+			                    <a id="btnNext">&raquo;</a>
+			                </div>
+			            </div>
+			            <div id="plwrap">
+			                <ul id="plList">
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">01.</div>
+			                            <div class="plTitle">All This Is - Joe L.'s Studio</div>
+			                            <div class="plLength">2:46</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">02.</div>
+			                            <div class="plTitle">The Forsaken - Broadwing Studio (Final Mix)</div>
+			                            <div class="plLength">8:31</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">03.</div>
+			                            <div class="plTitle">All The King's Men - Broadwing Studio (Final Mix)</div>
+			                            <div class="plLength">5:02</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">04.</div>
+			                            <div class="plTitle">The Forsaken - Broadwing Studio (First Mix)</div>
+			                            <div class="plLength">8:32</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">05.</div>
+			                            <div class="plTitle">All The King's Men - Broadwing Studio (First Mix)</div>
+			                            <div class="plLength">5:05</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">06.</div>
+			                            <div class="plTitle">All This Is - Alternate Cuts</div>
+			                            <div class="plLength">2:49</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">07.</div>
+			                            <div class="plTitle">All The King's Men (Take 1) - Alternate Cuts</div>
+			                            <div class="plLength">5:45</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">08.</div>
+			                            <div class="plTitle">All The King's Men (Take 2) - Alternate Cuts</div>
+			                            <div class="plLength">5:27</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">09.</div>
+			                            <div class="plTitle">Magus - Alternate Cuts</div>
+			                            <div class="plLength">5:46</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">10.</div>
+			                            <div class="plTitle">The State Of Wearing Address (fucked up) - Alternate Cuts</div>
+			                            <div class="plLength">5:25</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">11.</div>
+			                            <div class="plTitle">Magus - Popeye's (New Years '04 - '05)</div>
+			                            <div class="plLength">5:54</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">12.</div>
+			                            <div class="plTitle">On The Waterfront - Popeye's (New Years '04 - '05)</div>
+			                            <div class="plLength">4:41</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">13.</div>
+			                            <div class="plTitle">Trance - Popeye's (New Years '04 - '05)</div>
+			                            <div class="plLength">13:17</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">14.</div>
+			                            <div class="plTitle">The Forsaken - Popeye's (New Years '04 - '05)</div>
+			                            <div class="plLength">8:13</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">15.</div>
+			                            <div class="plTitle">The State Of Wearing Address - Popeye's (New Years '04 - '05)</div>
+			                            <div class="plLength">7:03</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">16.</div>
+			                            <div class="plTitle">Magus - Popeye's (Valentine's Day '05)</div>
+			                            <div class="plLength">5:44</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">17.</div>
+			                            <div class="plTitle">Trance - Popeye's (Valentine's Day '05)</div>
+			                            <div class="plLength">10:47</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">18.</div>
+			                            <div class="plTitle">The State Of Wearing Address - Popeye's (Valentine's Day '05)</div>
+			                            <div class="plLength">5:37</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">19.</div>
+			                            <div class="plTitle">All This Is - Smith St. Basement (01/08/04)</div>
+			                            <div class="plLength">2:49</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">20.</div>
+			                            <div class="plTitle">Magus - Smith St. Basement (01/08/04)</div>
+			                            <div class="plLength">5:46</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">21.</div>
+			                            <div class="plTitle">Beneath The Painted Eye - Smith St. Basement (06/06/03)</div>
+			                            <div class="plLength">13:08</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">22.</div>
+			                            <div class="plTitle">Innocence - Smith St. Basement (06/06/03)</div>
+			                            <div class="plLength">5:16</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">23.</div>
+			                            <div class="plTitle">Magus - Smith St. Basement (06/06/03)</div>
+			                            <div class="plLength">5:47</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">24.</div>
+			                            <div class="plTitle">Madness Explored - Smith St. Basement (06/06/03)</div>
+			                            <div class="plLength">4:52</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">25.</div>
+			                            <div class="plTitle">The Forsaken - Smith St. Basement (06/06/03)</div>
+			                            <div class="plLength">8:44</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">26.</div>
+			                            <div class="plTitle">All This Is - Smith St. Basement (12/28/03)</div>
+			                            <div class="plLength">3:01</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">27.</div>
+			                            <div class="plTitle">Magus - Smith St. Basement (12/28/03)</div>
+			                            <div class="plLength">6:10</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">28.</div>
+			                            <div class="plTitle">Madness Explored - Smith St. Basement (12/28/03)</div>
+			                            <div class="plLength">5:06</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">29.</div>
+			                            <div class="plTitle">Trance - Smith St. Basement (12/28/03)</div>
+			                            <div class="plLength">12:33</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">30.</div>
+			                            <div class="plTitle">The Forsaken - Smith St. Basement (12/28/03)</div>
+			                            <div class="plLength">8:57</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">31.</div>
+			                            <div class="plTitle">All This Is (Take 1) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">4:55</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">32.</div>
+			                            <div class="plTitle">All This Is (Take 2) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">5:46</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">33.</div>
+			                            <div class="plTitle">Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">14:06</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">34.</div>
+			                            <div class="plTitle">Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">13:26</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">35.</div>
+			                            <div class="plTitle">The Forsaken (Take 1) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">8:38</div>
+			                        </div>
+			                    </li>
+			                    <li>
+			                        <div class="plItem">
+			                            <div class="plNum">36.</div>
+			                            <div class="plTitle">The Forsaken (Take 2) - Smith St. Basement (Nov. '03)</div>
+			                            <div class="plLength">8:37</div>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			
+				</div>
+				</div>
+				<i class="fa fa-compress"></i>
+			</div>
+			<div class="show-app2">app2<i class="fa fa-compress"></i></div>
+			<div class="show-app3">app3<i class="fa fa-compress"></i></div>
+			<div class="show-app4">app4<i class="fa fa-compress"></i></div>
+		</div>
+		<div id="options">
+			<ul>
+				<li id="app1"><i class="fa fa-expand"></i><div>App1</div></li>
+				<li id="app2"><i class="fa fa-expand"></i><div>App2</div></li>
+				<li id="app3"><i class="fa fa-expand"></i><div>App3</div></li>
+				<li id="app4"><i class="fa fa-expand"></i><div>App4</div></li>
+			</ul>
+		</div>
+		<div id="menu">
+			<div id="left"><a href="#"><i class="fa fa-car"></i></a><br><span>Controls</span></div>
+			<div id="center">
+				<ul id="first">
+					<li class="first-list"><a href="#"><img style="" src="images/seatHeater.png"></a></li>
+					<li class="first-list"><a href="#"><img src="images/heat.png"></a></li>
+					<li class="first-list"><a href="#"><img src="images/airflow.jpg"></a></li>
+					<li class="first-list"><a href="#"><img src="images/fan.png"></a></li>
+					<li class="first-list"><a href="#"><img src="images/heat.png"></a></li>
+					<li class="first-list"><a href="#"><img src="images/seatHeater.png"></a></li>
+				</ul>
+				<ul id="second">
+					<li class="second-list"><div class="glyphicon glyphicon-option-horizontal"></div></li>
+					<li class="second-list">Front</li>
+					<li class="second-list">Airflow</li>
+					<li class="second-list"><span class="glyphicon glyphicon-option-horizontal"></span></li>
+					<li class="second-list">Rear</li>
+					<li class="second-list"><span class="glyphicon glyphicon-option-horizontal"></span></li>
+				</ul>
+			</div>
+			<div id="right">
+				<label class="switch">
+				  <input type="checkbox">
+				  <div class="slider round"></div>
+				</label>
+			</div>
+			<div id="second-line">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqwVVXztHmbVgaNz4vAX7k5xx4nfsOqQE&callback=initMap">
+    </script>
+    <script>
+    	
+		function initMap() {
+			var directionsDisplay = new google.maps.DirectionsRenderer({ draggable: true });
+			var directionsService = new google.maps.DirectionsService();
+			var map;
+
+		    var myOptions = {
+		        zoom: 10,
+		        mapTypeId: google.maps.MapTypeId.Roadmap,
+		        center: new google.maps.LatLng(37.279518,-121.867905)
+		    };
+		    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		    directionsDisplay.setMap(map);
+		    directionsDisplay.setPanel(document.getElementById("directions"));
+		    
+		    $("#routeGo").on("click", function() { calcRoute(); $('#directions').css('opacity', 1); });
+		   
+		    function calcRoute() {
+		    var request = {
+		        origin: $("#routeTo").val(),
+		        destination: $("#routeFrom").val(),
+		        travelMode: google.maps.TravelMode['DRIVING']
+		    };
+		    directionsService.route(request, function(response, status) {
+		        if (status == google.maps.DirectionsStatus.OK) {
+		            directionsDisplay.setDirections(response);
+		        }
+		    });
+		}
+		    
+		};
+
+
+		
+    </script>
+</body>
+</html>
