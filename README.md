@@ -1,6 +1,6 @@
 # Car-user-interface
 
-Try to implement the same user interface modal of Tesla-UI.
+Try to implement the same user interface model of Tesla-UI.
 
 Car-user-interface helps you to:
 
